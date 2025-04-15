@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class FenwickTree {
  public:
   FenwickTree(int n) : sums(n + 1) {}
