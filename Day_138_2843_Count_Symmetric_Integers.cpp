@@ -3,7 +3,7 @@ using namespace std;
 class Solution {
 public:
     int countSymmetricIntegers(int low, int high) {
-         int ans = 0;
+         int result= 0;
 
     for (int num = low; num <= high; ++num)
       if (isSymmetricInteger(num))

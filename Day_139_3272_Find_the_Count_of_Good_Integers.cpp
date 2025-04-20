@@ -6,7 +6,7 @@ class Solution {
     const int halfLength = (n + 1) / 2;
     const int minHalf = pow(10, halfLength - 1);
     const int maxHalf = pow(10, halfLength);
-    long ans = 0;
+    long result= 0;
     unordered_set<string> seen;
 
     for (int num = minHalf; num < maxHalf; ++num) {
@@ -31,7 +31,7 @@ class Solution {
       for (const int freq : digitCount)
         if (freq > 1)
           permutations /= factorial(freq);
-      ans += permutations;
+      result+= permutations;
     }
 
     return ans;

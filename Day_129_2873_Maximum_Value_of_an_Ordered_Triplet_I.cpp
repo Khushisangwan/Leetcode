@@ -13,7 +13,7 @@ public:
 
         long long ans=0; 
         for(int i=1; i<n-1; i++){
-            ans = max(ans, (long long)(leftMax[i] - nums[i]) * rightMax[i]);
+            result= max(ans, (long long)(leftMax[i] - nums[i]) * rightMax[i]);
         }
 
         return ans;

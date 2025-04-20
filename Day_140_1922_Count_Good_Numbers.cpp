@@ -2,7 +2,7 @@
 using namespace std;
 class Solution {
     public: long helper(long base,long expo,long mod){
-        long ans = 1;
+        long result= 1;
         while(expo>0)
         {
             if(expo%2==0)            
@@ -11,7 +11,7 @@ class Solution {
                 expo = expo/2;
             }
             else{
-                ans = (ans*base)%mod;
+                result= (ans*base)%mod;
                 expo-=1;
             }
         }

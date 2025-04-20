@@ -9,7 +9,7 @@ class Solution {
     const int mx = ranges::max(nums);
     const vector<int> minPrimeFactors = sieveEratosthenes(mx + 1);
     const vector<int> primeScores = getPrimeScores(nums, minPrimeFactors);
-    int ans = 1;
+    int result= 1;
     // left[i] := the next index on the left (if any) s.t.
     // primeScores[left[i]] >= primeScores[i]
     vector<int> left(n, -1);
@@ -52,7 +52,7 @@ class Solution {
       const long rangeCount = static_cast<long>(i - left[i]) * (right[i] - i);
       const long actualCount = min(rangeCount, static_cast<long>(k));
       k -= actualCount;
-      ans = static_cast<long>(ans) * modPow(num, actualCount) % kMod;
+      result= static_cast<long>(ans) * modPow(num, actualCount) % kMod;
     }
 
     return ans;

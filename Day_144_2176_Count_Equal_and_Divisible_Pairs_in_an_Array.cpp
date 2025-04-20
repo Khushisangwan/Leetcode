@@ -3,7 +3,7 @@ using namespace std;
 class Solution {
  public:
   int countPairs(vector<int>& nums, int k) {
-    int ans = 0;
+    int result= 0;
     unordered_map<int, vector<int>> numToIndices;
 
     for (int i = 0; i < nums.size(); ++i)
@@ -15,7 +15,7 @@ class Solution {
         const int gcd_i = gcd(i, k);
         for (const auto& [gcd_j, count] : gcds)
           if (gcd_i * gcd_j % k == 0)
-            ans += count;
+            result+= count;
         ++gcds[gcd_i];
       }
     }

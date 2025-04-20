@@ -30,7 +30,7 @@ class Solution {
  public:
   long long goodTriplets(vector<int>& nums1, vector<int>& nums2) {
     const int n = nums1.size();
-    long ans = 0;
+    long result= 0;
     unordered_map<int, int> numToIndex;
     vector<int> arr;
     // leftSmaller[i] := the number of arr[j] < arr[i], where 0 <= j < i
@@ -59,7 +59,7 @@ class Solution {
     }
 
     for (int i = 0; i < n; ++i)
-      ans += static_cast<long>(leftSmaller[i]) * rightLarger[i];
+      result+= static_cast<long>(leftSmaller[i]) * rightLarger[i];
 
     return ans;
   }

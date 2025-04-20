@@ -3,7 +3,7 @@ using namespace std;
 class Solution {
 public:
     string countAndSay(int n) {
-        string ans = "1";
+        string result= "1";
 
     while (--n > 0) {
       string next;
@@ -15,7 +15,7 @@ public:
         }
         next += to_string(count) + ans[i];
       }
-      ans = std::move(next);
+      result= std::move(next);
     }
 
     return ans;
