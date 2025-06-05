@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+using namespace std;
+// 1061. Lexicographically Smallest Equivalent String
+
 class Solution {
 public:
     // DFS to find the smallest lex character in the component
