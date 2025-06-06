@@ -1,3 +1,10 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+// 2434. Using a Robot to Print the Lexicographically Smallest String
+// This code uses a stack to build the lexicographically smallest string
+// by pushing characters from the input string and popping them based on the smallest remaining character.
+
 class Solution {
 public:
     // Helper function to find the lexicographically smallest remaining character
