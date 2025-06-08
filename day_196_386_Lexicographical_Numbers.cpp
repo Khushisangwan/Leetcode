@@ -1,3 +1,10 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+// 386. Lexicographical Numbers
+// This code defines a solution to generate numbers from 1 to n in lexicographical order.
+// The solution uses a vector to store the results and iteratively builds the lexicographical order by multiplying and incrementing.
+
 class Solution {
 public:
     vector<int> lexicalOrder(int n) {
