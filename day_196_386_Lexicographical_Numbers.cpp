@@ -8,20 +8,25 @@ using namespace std;
 class Solution {
 public:
     vector<int> lexicalOrder(int n) {
-         vector<int> ans;
-    int curr = 1;
+        vector<int> ans; // Vector to store the result
+        int curr = 1;    // Start from 1
 
-    while (ans.size() < n) {
-      ans.push_back(curr);
-      if (curr * 10 <= n) {
-        curr *= 10;
-      } else {
-        while (curr % 10 == 9 || curr == n)
-          curr /= 10;
-        ++curr;
-      }
-    }
+        // Continue until we have n numbers
+        while (ans.size() < n) {
+            ans.push_back(curr); // Add current number to result
 
-    return ans;
+            // Try to go deeper in lexicographical order (i.e., append a zero)
+            if (curr * 10 <= n) {
+                curr *= 10;
+            } else {
+                // If we can't go deeper, move to the next number
+                // Go up until we can increment
+                while (curr % 10 == 9 || curr == n)
+                    curr /= 10;
+                ++curr;
+            }
+        }
+
+        return ans;
     }
 };
