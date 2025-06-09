@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+// 440. K-th Smallest in Lexicographical Order
+// This code defines a solution to find the k-th smallest number in lexicographical order from 1 to n.
+// The solution uses a method to calculate the gap between two numbers in lexicographical order and iteratively finds the k-th number.
+
 class Solution {
 public:
     int findKthNumber(int n, int k) {
