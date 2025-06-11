@@ -1,3 +1,9 @@
+#include <bits/stdc++.h>
+using namespace std;
+// 3445. Maximum Difference Between Even and Odd Frequency II
+// This code defines a solution to find the maximum difference between the frequency of characters with even and odd counts in a string,
+// considering only characters with frequencies greater than zero and a minimum length of k for the substring.
+
 array<vector<int>, 5> freq;
 int n;
 class Solution {
