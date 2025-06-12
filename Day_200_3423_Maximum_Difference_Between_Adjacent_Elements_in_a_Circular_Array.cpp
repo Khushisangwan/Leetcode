@@ -1,3 +1,8 @@
+#include<bits/stdc++.h>
+using namespace std;
+// 3423. Maximum Difference Between Adjacent Elements in a Circular Array
+// This code defines a solution to find the maximum absolute difference between adjacent elements in a circular array.
+
 class Solution {
 public:
     int maxAdjacentDistance(vector<int>& nums) {
