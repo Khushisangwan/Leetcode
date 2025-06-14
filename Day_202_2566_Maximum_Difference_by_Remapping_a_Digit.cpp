@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+// 2566. Maximum Difference by Remapping a Digit
+// This code defines a solution to find the maximum difference by remapping a digit in a number.
+// The goal is to replace one digit in the number with another digit to maximize the difference between the new number and the original number.
+
 class Solution {
 public:
     int minMaxDifference(int num) {
