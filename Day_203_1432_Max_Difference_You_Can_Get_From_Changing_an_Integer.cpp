@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+// 1432. Maximum Difference You Can Get From Changing an Integer
+// This code defines a solution to find the maximum difference you can get from changing an integer.
+// The goal is to replace one digit in the number with another digit to maximize the difference between the new number and the original number.
+
 class Solution {
 public:
     int maxDiff(int num) {
