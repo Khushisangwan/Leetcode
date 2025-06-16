@@ -1,3 +1,8 @@
+#include<bits/stdc++.h>
+using namespace std;
+// 2016. Maximum Difference Between Increasing Elements
+// This code defines a solution to find the maximum difference between increasing elements in an array.
+
 class Solution {
 public:
     int maximumDifference(vector<int>& nums) {
