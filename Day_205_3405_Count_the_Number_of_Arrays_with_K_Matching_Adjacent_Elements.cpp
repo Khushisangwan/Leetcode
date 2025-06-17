@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+// 3405. Count the Number of Arrays with K Matching Adjacent Elements
+// This code defines a solution to count the number of arrays with exactly k matching adjacent elements.
+
 const int MOD = 1e9 + 7;
 
 class Solution {
