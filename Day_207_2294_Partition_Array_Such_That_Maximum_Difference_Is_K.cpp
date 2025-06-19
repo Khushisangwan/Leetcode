@@ -1,3 +1,13 @@
+#include<bits/stdc++.h>
+#include <range/v3/all.hpp>
+using namespace std;
+using namespace ranges;
+//         formula = (formula * nCr(n-1, k)) % MOD;
+//         return formula;
+//         return ans;
+//         return ans;
+//         return ans;
+    
 class Solution {
 public:
     int partitionArray(vector<int>& nums, int k) {
