@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+// Problem: Maximum Manhattan Distance After K Changes
+// Contest: Codeforces - Codeforces Round #344 (Div. 2)
+// URL: https://codeforces.com/problemset/problem/344/C
+
 class Solution {
 public:
     int maxDistance(string s, int k) {
