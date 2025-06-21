@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+// Problem: Minimum Deletions to Make String K-Special
+// Contest: Codeforces - Codeforces Round #308 (Div. 2)
 class Solution {
 public:
     int minimumDeletions(string word, int k) {
