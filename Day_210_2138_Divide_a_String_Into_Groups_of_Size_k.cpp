@@ -16,23 +16,26 @@ using namespace std;
 class Solution {
 public:
     vector<string> divideString(string s, int k, char fill) {
-     int n = s.size();
-    int groups = (n + k - 1) / k;
-    vector<string> result(groups);
-    
-    for (int i = 0; i < groups; i++) {
-        string group;
-        for (int j = 0; j < k; j++) {
-            int index = i * k + j;
-            if (index < n) {
-                group += s[index];
-            } else {
-                group += fill; // Padding
+        int n = s.size();
+        // Calculate the number of groups needed
+        int groups = (n + k - 1) / k;
+        vector<string> result(groups);
+        
+        // Iterate over each group
+        for (int i = 0; i < groups; i++) {
+            string group;
+            // Collect up to k characters for the current group
+            for (int j = 0; j < k; j++) {
+                int index = i * k + j;
+                if (index < n) {
+                    group += s[index]; // Add character from string
+                } else {
+                    group += fill; // Pad with fill character if needed
+                }
             }
+            result[i] = group; // Store the group in the result
         }
-        result[i] = group;
-    }
-    
-    return result;
+        
+        return result; // Return all groups
     }
 };
