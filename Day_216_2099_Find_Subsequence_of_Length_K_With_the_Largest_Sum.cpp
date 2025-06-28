@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+// LeetCode problem 2099: Find Subsequence of Length K With the Largest Sum
+// Problem link: https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/
+// Time complexity: O(n log n) due to sorting
+// Space complexity: O(n) for storing the pairs of values and indices
 class Solution {
 public:
     vector<int> maxSubsequence(vector<int>& nums, int k) {
