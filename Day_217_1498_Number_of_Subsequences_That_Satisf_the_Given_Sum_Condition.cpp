@@ -19,8 +19,9 @@ class Solution {
 public:
     int numSubseq(vector<int>& nums, int target) {
         int mod = 1e9 + 7, n = nums.size();
-        sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end()); // Step 1: Sort the array
 
+        // Step 2: Precompute powers of 2 up to n (for subsequence counts)
         vector<int> power(n, 1);
         for (int i = 1; i < n; ++i) {
             power[i] = (power[i - 1] * 2) % mod;
@@ -28,14 +29,17 @@ public:
 
         int left = 0, right = n - 1, result = 0;
 
+        // Step 3: Two pointers to find valid subsequences
         while (left <= right) {
+            // If the sum of the smallest and largest is within target
             if (nums[left] + nums[right] <= target) {
+                // All subsequences between left and right are valid
                 result = (result + power[right - left]) % mod;
-                ++left;
+                ++left; // Move left pointer to the right
             } else {
-                --right;
+                --right; // Otherwise, move right pointer to the left
             }
         }
-        return result;
+        return result; // Return the total count modulo 1e9+7
     }
 };
