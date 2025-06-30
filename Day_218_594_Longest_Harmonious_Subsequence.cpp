@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+// Problem - Longest Harmonious Subsequence
+// Approach - Two Pointers Technique
 class Solution {
 public:
     int findLHS(vector<int>& nums) {
