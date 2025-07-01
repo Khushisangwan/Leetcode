@@ -1,3 +1,8 @@
+#include<bits/stdc++.h>
+using namespace std;
+// Problem - Find the Original Typed String I
+// Approach - Count the number of characters that are different from their previous character
+
 class Solution {
 public:
     int possibleStringCount(string word) {
