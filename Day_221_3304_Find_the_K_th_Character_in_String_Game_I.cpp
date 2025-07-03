@@ -16,15 +16,20 @@ using namespace std;
 
 class Solution {
 public:
+    // Function to find the k-th character in the generated string
     char kthCharacter(int k) {
-        std::string sb = "a";
+        std::string sb = "a"; // Start with the initial string "a"
+        // Keep generating the string until its length is at least k
         while (sb.length() < k) {
-            int size = sb.length();
+            int size = sb.length(); // Current size of the string
+            // For each character in the current string
             for (int i = 0; i < size; ++i) {
+                // Calculate the next character (wrap around after 'z')
                 char nextChar = 'a' + ((sb[i] - 'a' + 1) % 26);
-                sb += nextChar;
+                sb += nextChar; // Append the next character to the string
             }
         }
+        // Return the k-th character (1-based index)
         return sb[k - 1];
     }
 };
