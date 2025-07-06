@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+// This code defines a class FindSumPairs that allows for efficient querying of pairs of elements from two arrays that sum to a given value.
+// It supports adding a value to an element in the second array and counting pairs that sum to a target value.
+// The class uses an unordered map to keep track of the frequency of elements in the second array, allowing for O(1) average time complexity for updates and queries.
+
 class FindSumPairs {
 private:
     vector<int> n1, n2;
