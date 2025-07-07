@@ -1,3 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Problem: 1353. Maximum Number of Events That Can Be Attended
+// Approach: Greedy with Priority Queue
+
+// Steps:
+// 1. Sort the events based on their start day.
+// 2. Use a priority queue to keep track of the end days of the events that
+
+// Time Complexity: O(n log n) where n is the number of events
+// Space Complexity: O(n) for the priority queue
+
 class Solution {
 public:
     int maxEvents(vector<vector<int>>& events) {
