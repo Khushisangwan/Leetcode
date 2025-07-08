@@ -1,3 +1,8 @@
+#include<bits/stdc++.h>
+using namespace std;
+// Problem: 1751. Maximum Number of Events That Can Be Attended II
+// Approach: Dynamic Programming with Binary Search
+// Steps:
 class Solution {
 public:
     int maxValue(vector<vector<int>>& events, int k) {
