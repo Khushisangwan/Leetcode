@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+// Problem: Reschedule Meetings for Maximum Free Time I
+// Approach: Prefix Sum and Sliding Window
+
 class Solution {
 public:
     int maxFreeTime(int eventTime, int k, vector<int>& startTime, vector<int>& endTime) {
