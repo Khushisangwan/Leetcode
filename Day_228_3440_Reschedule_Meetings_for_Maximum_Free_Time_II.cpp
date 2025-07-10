@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+// Problem: Reschedule Meetings for Maximum Free Time II
+// Approach: Sliding Window with Gap Tracking
 class Solution {
 public:
     int gap[3], id[3]={0, 1, 2};
