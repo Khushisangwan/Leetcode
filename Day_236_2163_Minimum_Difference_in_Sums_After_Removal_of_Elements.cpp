@@ -1,5 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Problem: Find the minimum difference in sums after removing elements from an array.
+// Approach: Use priority queues to maintain the top k sums for both left and right parts of the array.
+// Steps:
+// 1. Split the array into two parts: left and right.
+// 2. Use a max-heap to keep track of the k largest elements in the left part and a min-heap for the right part.
+// 3. Calculate the sum of the k largest elements in the left part and the k
+
+//    smallest elements in the right part.
+// 4. Iterate through the array, updating the sums as necessary.
+// 5. Calculate the minimum difference between the two sums.
+// Time Complexity: O(n log k), where n is the number of elements in the array
+// Space Complexity: O(k), where k is the number of elements to be removed.
 class Solution {
 public:
     long long minimumDifference(vector<int>& nums) {
