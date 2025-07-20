@@ -5,6 +5,20 @@
 #include <unordered_map>
 #include <algorithm>
 
+// Problem Statement: Given a list of folder paths, delete all duplicate folder subtrees and return the remaining paths.
+// Approach: Construct a tree structure from paths, encode subtrees into signatures, mark duplicates, and collect surviving paths.
+
+// Step-by-step Procedure:
+// 1. Build a prefix tree (trie) from the list of folder paths where each node represents a folder.
+// 2. Traverse the tree to generate a unique string encoding for each subtree and store them in a hash map.
+// 3. If multiple nodes share the same subtree encoding, mark all such nodes (except one) as deleted.
+// 4. Perform a DFS traversal to collect all folder paths that are not part of any deleted subtree.
+// 5. Return the collected folder paths after cleanup, and delete the allocated memory to prevent leaks.
+
+// Time Complexity: O(N * L * log L), where N is the number of paths and L is the average path length (log L for sorting in encoding).
+// Space Complexity: O(N * L), due to the tree structure and hash map storing encodings.
+
+
 class Node {
 public:
     std::map<std::string, Node*> children;
