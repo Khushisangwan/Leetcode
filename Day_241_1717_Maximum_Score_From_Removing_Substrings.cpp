@@ -1,5 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Greedy Approach to maximize score by removing pairs of substrings
+// This code uses a greedy strategy to prioritize the removal of pairs of characters based on their scores.
+// The algorithm iterates through the string, counting occurrences of the characters and calculating the score based on the given values.
+
 class Solution {
 public:
     int maximumGain(string s, int x, int y) {
