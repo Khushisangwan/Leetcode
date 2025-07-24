@@ -1,5 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
+// This code implements a DFS approach to calculate the minimum score after removing two edges in a tree.
+// It uses subtree XOR sums to determine the optimal partitions of the tree after edge removals.
+// The algorithm efficiently computes the minimum score by exploring all pairs of edges and calculating the resulting scores based on the XOR sums of the partitions.
 class Solution {
 public:
     int calc(int part1, int part2, int part3) {
