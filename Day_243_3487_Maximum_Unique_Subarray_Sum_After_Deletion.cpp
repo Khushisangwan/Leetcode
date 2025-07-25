@@ -1,5 +1,8 @@
 #inlude<bits/stdc++.h>
 using namespace std;
+// This code calculates the maximum sum of unique positive integers from an array.
+// If all integers are negative, it returns the maximum integer from the array.
+
 class Solution {
 public:
     int maxSum(vector<int>& nums) {
