@@ -1,6 +1,10 @@
 #include <vector>
 #include <algorithm>
-
+//#include <limits>
+// This code calculates the maximum number of subarrays after removing one conflicting pair.
+// It uses a greedy approach to maintain the top two values and their contributions.
+// The solution is efficient and works within the constraints provided.
+// This code is designed to work with C++14 standard.
 class Solution {
 public:
     long long maxSubarrays(int n, std::vector<std::vector<int>>& conflictingPairs) {
