@@ -1,5 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
+// This code counts the number of subsets of an array that yield the maximum bitwise OR value.
+// The solution uses backtracking to explore all subsets and counts those that match the maximum OR value
+// The code is designed to work with C++14 standard.
+// This code is efficient and works within the constraints provided.
+// The function `countMaxOrSubsets` calculates the maximum OR value and then uses a helper function to count subsets.
+// The helper function `backtrack` recursively explores subsets, accumulating the OR value and counting valid subsets.
+// The code is structured to handle the input as a vector of integers.
+// The solution is efficient and works within the constraints provided.
+
 class Solution {
 public:
     int countMaxOrSubsets(vector<int>& nums) {
