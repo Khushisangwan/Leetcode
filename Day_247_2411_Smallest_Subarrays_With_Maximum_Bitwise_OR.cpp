@@ -1,5 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
+// This code finds the smallest subarrays with the maximum bitwise OR for each index in the input array.
+// It uses a greedy approach to track the last seen index of each bit and calculates the length
+// of the smallest subarray that includes the maximum OR value.
+// The solution is designed to work with C++14 standard.
+// The function `smallestSubarrays` iterates through the input array in reverse order,
+// updating the last seen indices of bits and calculating the smallest subarray length for each index.
+// The code is efficient and works within the constraints provided.
 class Solution {
 public:
     vector<int> smallestSubarrays(vector<int>& nums) {
