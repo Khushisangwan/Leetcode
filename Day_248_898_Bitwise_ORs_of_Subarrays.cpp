@@ -1,3 +1,19 @@
+#include <bits.stdc++.h>
+using namespace std;
+
+// Problem: Count the number of distinct bitwise ORs of all subarrays in a given array.
+// Approach: Use a set to track unique OR values across all subarrays.
+
+// Steps:
+// 1. Initialize a set to store the distinct OR values.
+// 2. Iterate through each element in the array.
+// 3. For each element, compute the OR with all previously computed ORs.
+// 4. Store the results in a set to ensure uniqueness.
+// 5. Return the size of the set as the result.
+
+// Time Complexity: O(n^2) in the worst case, but typically much better due to the nature of bitwise operations.
+// Space Complexity: O(n) for storing unique OR values.
+
 
 class Solution {
 public:
