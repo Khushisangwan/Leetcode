@@ -2,6 +2,16 @@
 #include <map>
 #include <algorithm>
 #include <climits>
+// Problem: Rearranging Fruits in Two Baskets
+// Approach: Use a map to count occurrences of each fruit in both baskets, then determine the minimum cost to balance them.
+// Steps:
+// 1. Count the occurrences of each fruit in both baskets.
+// 2. Check if the total count of each fruit is even; if not, return -1.
+// 3. Calculate the minimum fruit value to determine the cost of swapping.
+// 4. Create a list of fruits that need to be swapped based on the difference in counts.
+// 5. Sort the list of fruits to swap and calculate the total cost based on the minimum fruit value.
+// Time Complexity: O(n log n) due to sorting, where n is the number of unique fruits.
+
 
 class Solution {
 public:
