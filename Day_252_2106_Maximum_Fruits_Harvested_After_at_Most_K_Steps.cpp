@@ -1,5 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Problem: Maximum Fruits Harvested After at Most K Steps
+// Approach: Use a sliding window technique to find the maximum number of fruits that can be harvested within k steps from startPos.
+// Steps:
+// 1. Initialize two pointers for the sliding window: left and right.
+// 2. Maintain a sum of fruits in the current window.
+// 3. Expand the right pointer to include more fruits until the total steps exceed k.
+// 4. If the steps exceed k, move the left pointer to reduce the window size until the steps are within k.
+// 5. Keep track of the maximum number of fruits harvested during this process.
+// Time Complexity: O(n) where n is the number of fruit trees.
+
 class Solution {
 public:
     int maxTotalFruits(vector<vector<int>>& fruits, int startPos, int k) {
