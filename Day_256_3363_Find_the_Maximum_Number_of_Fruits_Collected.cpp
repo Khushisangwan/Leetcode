@@ -1,3 +1,18 @@
+#inlcude <bits/stdc++.h
+using namespace std;
+
+// Problem: Find the Maximum Number of Fruits Collected
+// Approach: Use dynamic programming to calculate the maximum fruits collected from a grid.
+
+// Steps:   
+// 1. Iterate through the grid and calculate the maximum fruits collected from each cell.
+// 2. Use two passes: one for the original grid and another for the transposed grid.
+// 3. Maintain a previous and current state to track the maximum fruits collected at each step.
+// 4. Return the total maximum fruits collected after both passes.
+
+// Time Complexity: O(n^2) where n is the size of the grid, as we iterate through each cell multiple times. 
+// Space Complexity: O(n) for the previous and current state arrays.
+
 class Solution {
 public:
     int maxCollectedFruits(vector<vector<int>>& grid) {
