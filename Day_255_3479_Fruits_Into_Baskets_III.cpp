@@ -1,3 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Problem: Fruits Into Baskets III
+// Approach: Use a segment tree to efficiently manage the baskets and fruits.
+
+// Steps:
+// 1. Build a segment tree to represent the baskets.
+// 2. For each fruit, find the appropriate basket using the segment tree.
+// 3. If a basket can accommodate the fruit, mark it as used and update the segment tree.
+// 4. If no basket can accommodate the fruit, increment the count of unplaced fruits.
+// 5. Return the total count of unplaced fruits.
+
+// Time Complexity: O(n log n) where n is the number of baskets, as we build the segment tree and perform updates.
+// Space Complexity: O(n) for the segment tree.
+
+
 class Solution {
 public:
     int numOfUnplacedFruits(vector<int>& fruits, vector<int>& baskets) {
