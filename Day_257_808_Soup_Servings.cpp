@@ -1,5 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Problem: Soup Servings
+// Approach: Use memoization to efficiently compute the probability of serving soup A before soup B.
+// Steps:
+// 1. Define a recursive function that calculates the probability based on the current servings of soup A and B.
+// 2. Use a cache to store already computed probabilities to avoid redundant calculations.
+// 3. Base cases: if both soups are empty, return 0.5; if soup A is empty, return 1.0; if soup B is empty, return 0.0.
+// 4. For each recursive call, consider the four possible serving combinations and compute their probabilities.
+// Time Complexity: O(n^2) where n is the number of servings, due to memoization.
 class Solution {
     vector<vector<double>> cache;
 public:
