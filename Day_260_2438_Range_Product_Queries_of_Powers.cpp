@@ -1,5 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Problem: Range Product Queries of Powers
+// Approach: Use prefix products and modular inverses to efficiently compute range products.
+// Steps:
+// 1. Identify the powers of two present in the number n.
+// 2. Compute the product of these powers and their modular inverses.
+// 3. For each query, calculate the product of the specified range using precomputed values.
+// Time Complexity: O(q + log n) where q is the number of queries and log n is for computing powers of two.
 class Solution {
 public:
     vector<int> productQueries(int n, vector<vector<int>>& queries) {
