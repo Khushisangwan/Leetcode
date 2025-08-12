@@ -1,5 +1,12 @@
 #include <vector>
 using namespace std;
+// Problem: 2787 Ways to Express an Integer as Sum of Powers
+// Approach: Dynamic programming to count ways to express n as a sum of powers of integers raised to x.
+
+// Time Complexity: O(n * log n) where n is the target integer and log n is the number of powers considered.
+// Space Complexity: O(n) for the dp array.
+// Note: The solution uses modular arithmetic to handle large numbers.
+
 static const int MOD = 1'000'000'007;
 
 class Solution {
