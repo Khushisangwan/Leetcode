@@ -1,5 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
+// Sliding Window Solution for New 21 Game Probability Calculation
+// This solution uses a sliding window technique to efficiently calculate the probability
+// of winning the New 21 Game, where the player can draw cards until they reach a score
+// of n or exceed it, with the goal of maximizing the probability of reaching a score
+// less than or equal to n before reaching k draws.
 class Solution {
 public:
     double new21Game(int n, int k, int maxPts) {
