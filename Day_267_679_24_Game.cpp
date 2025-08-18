@@ -1,3 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Backtracking Solution for 24 Game
+// Problem: Given four integers, the goal is to determine if they can be combined using the four basic arithmetic operations 
+//          (addition, subtraction, multiplication, and division) to yield the number 24. 
+// Approach: This solution uses a backtracking technique to explore all possible combinations of the numbers and operations.
+
+// Steps:
+// 1. Convert the integers to doubles for precision.
+// 2. Use a recursive function to try all combinations of the numbers and operations.
+// 3. Check if the result of any combination equals 24, allowing for a small margin of error to account for floating-point precision issues.
+// 4. If a valid combination is found, return true; otherwise, backtrack and try the next combination.
+// 5. The function continues until all combinations are exhausted or a valid combination is found.
+
+// Time Complexity: O(4^n) where n is the number of integers (in this case, 4).
+// Space Complexity: O(n) for the recursion stack.
+
+
 class Solution {
 private:
     // Target value.
