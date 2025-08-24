@@ -1,3 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Problem: Find the minimum sum of areas of rectangles that can cover all the 1s in a binary grid when partitioned into 
+//          three rectangles.
+// Approach: Use bit manipulation to efficiently check for the presence of 1s in submatrices and evaluate different partitioning
+//          strategies (vertical cuts, horizontal cuts, T-shapes).
+
+// Steps:
+// 1. Preprocess the grid to create bitmask representations for rows and columns.
+// 2. Define a function to calculate the area of the bounding box of 1s in a given submatrix using bitwise operations.
+// 3. Iterate through all possible ways to partition the grid into three rectangles:
+//    - Two vertical cuts
+//    - Two horizontal cuts
+//    - T-shaped partitions
+// 4. For each partitioning strategy, calculate the sum of the areas of the three rectangles and keep track of the minimum sum found.
+// 5. Return the minimum sum of areas found.    
+
+// Time Complexity: O(n^2 * m + m^2 * n) where n is the number of rows and m is the number of columns.
+// Space Complexity: O(n + m) for storing the bitmask representations of rows and columns
+
 unsigned A[30], T[30];
 
 class Solution {
