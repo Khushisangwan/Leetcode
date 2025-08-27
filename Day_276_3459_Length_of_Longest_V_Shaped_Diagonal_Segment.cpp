@@ -1,17 +1,31 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Problem: Find the length of the longest V-shaped diagonal segment in a grid
+// Approach: Use DFS with memoization to explore all possible V-shaped diagonal segments starting from each cell in the grid.
 class Solution {
 public:
     int lenOfVDiagonal(vector<vector<int>>& grid) {
         int m = grid.size(), n = grid[0].size();
+        
+        // Diagonal directions: down-right, down-left, up-left, up-right
         int dirs[4][2] = {{1, 1}, {1, -1}, {-1, -1}, {-1, 1}};
+        
+        // Memoization array: [row][col][direction][turn_allowed]
         int memo[m][n][4][2];
         memset(memo, -1, sizeof(memo));
 
+        // DFS function to find the longest V-shaped diagonal segment
+        // cx, cy: current position
+        // direction: current moving direction (0-3)
+        // turn: whether we can still make a turn
+        // target: the value we're looking for (alternates between 1 and 0)
         function<int(int, int, int, bool, int)> dfs =
             [&](int cx, int cy, int direction, bool turn, int target) -> int {
+            
+            // Calculate next position based on current direction
             int nx = cx + dirs[direction][0];
             int ny = cy + dirs[direction][1];
+            
             /* If it goes beyond the boundary or the next node's value is not
              * the target value, then return */
             if (nx < 0 || ny < 0 || nx >= m || ny >= n ||
