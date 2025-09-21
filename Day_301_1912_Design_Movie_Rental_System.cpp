@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 struct Node {
     int shop, movie, price;
     bool operator<(const Node& other) const {
