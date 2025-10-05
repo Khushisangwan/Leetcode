@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 uint8_t status[40000];
 int dir[5]={0, 1, 0, -1, 0};
 
