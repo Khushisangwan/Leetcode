@@ -1,4 +1,6 @@
 //Greedy & Union Find
+#include <bits/stdc++.h>
+using namespace std;
 class UnionFind {    
     vector<int> root, rank;
 public:
