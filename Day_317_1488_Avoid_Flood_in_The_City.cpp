@@ -1,4 +1,6 @@
 // this variant version uses different UnionFind class
+#include<bits/stdc++.h>
+using namespace std;
 class UnionFind{
 public:
     vector<int> root;
