@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     string findLexSmallestString(string s, int a, int b) {
