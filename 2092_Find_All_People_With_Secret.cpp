@@ -1,4 +1,6 @@
 //UnionFind modified from my old code https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/solutions/3930534/c-kruskal-s-algorithm-beats-95-26-math/
+#include<bits/stdc++.h>
+using namespace std;
 class UnionFind {    
     vector<int> root, rank;
 public:
