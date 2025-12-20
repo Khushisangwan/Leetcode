@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
     bool isUnsorted(const vector<string>& strs, int j) {
         for (int i = 1; i < strs.size(); i++)
