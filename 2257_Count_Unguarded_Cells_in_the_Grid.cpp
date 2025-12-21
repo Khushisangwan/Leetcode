@@ -1,4 +1,6 @@
 // union find class with Size & components
+#include<bits/stdc++.h>
+using namespace std;
 class UnionFind {
     int root[100001], Size[100001];
 public:
