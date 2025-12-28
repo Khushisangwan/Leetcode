@@ -4,17 +4,20 @@ class Solution {
 public:
     int countNegatives(vector<vector<int>>& grid) {
         int m = grid.size(), n = grid[0].size();
-        int i = m - 1; //row
-        int j = 0;     //col
+        int i = m - 1; // Start from bottom row
+        int j = 0;     // Start from leftmost column
 
         int res = 0;
 
+        // Two-pointer approach: start from bottom-left corner
         while (i >= 0 && j < n) {
             if (grid[i][j] < 0) {
+                // If current element is negative, all elements to the right are also negative
                 res += n - j;
-                i--;
-            } else
-                j++;
+                i--; // Move up to previous row
+            } else {
+                j++; // Move right to next column
+            }
         }
 
         return res;
