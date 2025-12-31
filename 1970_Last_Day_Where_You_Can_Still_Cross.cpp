@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class DSU {
     vector<int> root, size;
 
