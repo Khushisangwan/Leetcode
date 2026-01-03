@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     int solve(int i, int n, int prev1, int prev2, int prev3, int mod,
