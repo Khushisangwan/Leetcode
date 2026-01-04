@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 const int N=316;
 bitset<N+1> isPrime=0;
 vector<int> prime;
