@@ -1,20 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Definition for a binary tree node
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
     long long MOD = 1e9 + 7;
     long long ans = 0;
 
+    // DFS to calculate sum of all nodes in subtree rooted at node
     long long dfs(TreeNode* node) {
         if (!node) return 0;
 
+        // Add left and right subtree sums to current node value
         node->val += dfs(node->left) + dfs(node->right);
         return node->val;
     }
 
+    // Find maximum product after splitting the tree
     int maxProduct(TreeNode* root) {
+        // Get total sum of all nodes
         long long total = dfs(root);
 
+        // BFS to explore all nodes and find optimal split
         queue<TreeNode*> q;
         q.push(root);
 
@@ -24,9 +39,11 @@ public:
 
             if (!node) continue;
 
+            // Calculate product of two parts: (total - node->val) and node->val
             long long cur = (total - node->val) * node->val;
             ans = max(ans, cur);
 
+            // Add children to queue
             if (node->left) q.push(node->left);
             if (node->right) q.push(node->right);
         }
