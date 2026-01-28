@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 const int M=1e4+1, NN=6400;
 const int INF=1e9+7;
 
