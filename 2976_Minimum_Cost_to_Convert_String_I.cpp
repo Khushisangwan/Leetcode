@@ -7,21 +7,25 @@ class Solution {
 public:
     long long minimumCost(string source, string target,
  vector<char>& original, vector<char>& changed, vector<int>& cost) {
+        // Initialize distance matrix for all character pairs
         long long dist[26][26];
         const long long INF = 1e14;
 
+        // Set initial distances: 0 for same characters, INF otherwise
         for (int i = 0; i < 26; ++i) {
             for (int j = 0; j < 26; ++j) {
                 dist[i][j] = (i == j) ? 0 : INF;
             }
         }
 
+        // Build graph from given transformations
         for (size_t i = 0; i < original.size(); ++i) {
             int u = original[i] - 'a';
             int v = changed[i] - 'a';
             dist[u][v] = min(dist[u][v], (long long)cost[i]);
         }
 
+        // Floyd-Warshall algorithm to find shortest paths between all pairs
         for (int k = 0; k < 26; ++k) {
             for (int i = 0; i < 26; ++i) {
                 if (dist[i][k] == INF) continue;
@@ -33,14 +37,15 @@ public:
             }
         }
 
+        // Calculate total cost to transform source to target
         long long totalCost = 0;
         int n = source.length();
 
         for (int i = 0; i < n; ++i) {
             int u = source[i] - 'a';
             int v = target[i] - 'a';
-            if (u == v) continue;
-            if (dist[u][v] == INF) return -1;
+            if (u == v) continue;  // No transformation needed
+            if (dist[u][v] == INF) return -1;  // Transformation impossible
             totalCost += dist[u][v];
         }
 
